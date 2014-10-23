@@ -3,7 +3,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib import admin
 from views import hello, current_datetime, hours_ahead, display_meta
 from books import views
-from contact import views_contact
+from contact.views import contact, thanks
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -13,8 +13,7 @@ urlpatterns = patterns('',
     (r'^search/$', views.search),
     (r'^http_info/$', display_meta),
     (r'^contact/$', contact),
-    (r'^thanks/$', contact),
-    (r'^thanks/$', thanks),
+    (r'^contact/thanks/$', thanks),
     (r'^admin/$', include(admin.site.urls)),)
 
 urlpatterns += staticfiles_urlpatterns()
