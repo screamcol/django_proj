@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN”>
+<html lang="ru">
+<head>
+	<title>META information</title>
+</head>
+
+<body>
+	<h1>Информация по http запросу</h1>
+	<br>
+	<table width="100%" border="1" cellpadding="4">
+	{% for name,value in meta_info %}
+	<tr>
+		<td>{{ name }}</td>
+		<td>{{ value }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+
+	<br>
+	<h1>Аттрибуты request</h1>
+	
+	<table width="100%" border="1" cellpadding="4">
+	{% for name,value in request_attr %}
+	<tr>
+		<td>{{ name }}</td>
+		<td>{{ value }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</body>
+</html>

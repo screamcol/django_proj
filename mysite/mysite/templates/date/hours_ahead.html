@@ -1,0 +1,7 @@
+{% extends "date/base.html" %}
+
+{% block title %}Время в будущем{% endblock %}
+
+{% block content %}
+<p>Через {{ hours_offset }} {{ suffix }} будет {{ next_time }}</p>
+{% endblock %}

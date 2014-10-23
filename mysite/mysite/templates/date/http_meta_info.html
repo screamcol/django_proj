@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN”>
+<html lang="ru">
+<head>
+	<title>META information</title>>
+</head>>
+
+<body>
+	<h1>Информация по http запросу</h1>
+	<br>
+	<table width="100%" border="0" cellpadding="4">
+	{% for name,value in meta_info %}
+	<tr>
+		<td>{{ name }}</td>
+		<td>{{ value }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</body>
+</html>
