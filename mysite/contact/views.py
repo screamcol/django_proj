@@ -21,4 +21,5 @@ def contact(request):
     return render_to_response('contact_form.html', {'errors':errors})
 
 def thanks(request):
+	print('Test git')
     return render_to_response('thanks.html', {'request_subj':data_request})
