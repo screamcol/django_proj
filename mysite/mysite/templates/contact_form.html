@@ -6,20 +6,17 @@
 </head>
 <body>
     <h1> Свяжитесь с нами </h1>
-
-    {% if errors %}
-    <ul>
-        {% for error in errors %}
-        <li>{{ error }}</li>
-        {% endfor %}
-    </ul>
+<!--
+    {% if form.errors %}
+        <p style="color: red;">
+            Исправьте следующие ошибки {{ form.errors }}.
+        </p>
     {% endif %}
-
-    <form action="/contact/" method="post">
-        <p>Тема: <input type="text" name="subject"></p>
-        <p>Ваш e-mail (необязательное): <input type="text" name="e-mail"></p>
-        <p>Сообщение:
-            <textarea name="message" rows="10" cols="50"></textarea> </p>
+-->
+    <form action="" method="post">
+        <table>
+            {{ form.as_table }}
+        </table>
         <input type="submit" value="Отправить">
     </form>
 </body>

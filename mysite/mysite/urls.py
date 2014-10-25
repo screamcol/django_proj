@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     (r'^search/$', views.search),
     (r'^http_info/$', display_meta),
     (r'^contact/$', contact),
-    (r'^contact/thanks/$', thanks),
+    (r'^thanks/$', thanks),
     (r'^admin/$', include(admin.site.urls)),)
 
 urlpatterns += staticfiles_urlpatterns()
