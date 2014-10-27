@@ -18,7 +18,8 @@ def contact(request):
 
             return HttpResponseRedirect('/thanks/')
     else:
-        form = ContactForm()
+        form = ContactForm(
+        	initial={'subject':'Мне очень нравится ваш сайт!'})
     return render_to_response('contact_form.html', {'form':form})
 
 def thanks(request):
