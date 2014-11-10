@@ -19,9 +19,9 @@ def current_datetime(request):
 
 def hours_ahead(request, offset):
 
-    if offset == '1' or (len(offset)==2 and offset[1]=='1'):
+    if offset == '1' or (len(offset)==2 and offset[1]=='1' and int(offset[0]) >= 2):
         suffix = 'час'
-    elif (int(offset) > 1 and int(offset) < 5) or (len(offset)==2 and (int(offset[1]) > 1 and int(offset[1]) < 5)):
+    elif (int(offset) > 1 and int(offset) < 5) or (len(offset)==2 and (int(offset[0]) > 1 and int(offset[1]) < 5)):
         suffix = 'часа'
     else:
         suffix = 'часов'
